@@ -3,13 +3,216 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
 </head>
 
 <body>
+    <h1>Survey</h1>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="name" class="form-control" id="name" placeholder="Name here">
+    </div>
+    <div class="form-group">
+        <label for="picture">Picture</label>
+        <input type="link" class="form-control" id="picture" placeholder="Link to your picture here">
+    </div>
 
+    <p>Select the answer that expresses how you feel about each statement.</p>
+    <ol class="surveryQuestions">
+        <li>
+            <div class="form-group">
+                <label for="q1">Bacon is delicious.</label>
+                <select class="form-control question" id="q1">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="">4 Sure, why not.</option>
+                    <option value="">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="form-group">
+                <label for="q2">I like Star Wars.</label>
+                <select class="form-control question" id="q2">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="4">4 Sure, why not.</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="form-group">
+                <label for="q3">I could talk about basketball all day.</label>
+                <select class="form-control question" id="q3">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="4">4 Sure, why not.</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="form-group">
+                <label for="q4">Other people are generally assholes.</label>
+                <select class="form-control question" id="q4">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="4">4 Sure, why not.</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="form-group">
+                <label for="q5">I'm an asshole.</label>
+                <select class="form-control question" id="q5">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="4">4 Sure, why not.</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="form-group">
+                <label for="q6">Social interaction should only occur after finishing the first round.</label>
+                <select class="form-control question" id="q6">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="4">4 Sure, why not.</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="form-group">
+                <label for="q7">I prefer my friends with a side of benefits.</label>
+                <select class="form-control question" id="q7">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="4">4 Sure, why not.</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="form-group">
+                <label for="q8">Video games, not just for kids.</label>
+                <select class="form-control question" id="q8">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="4">4 Sure, why not.</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="form-group">
+                <label for="q9">I need a workout buddy.</label>
+                <select class="form-control question" id="q9">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="4">4 Sure, why not.</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="form-group">
+                <label for="q10">I'm only here because Craigslist Personals got shut down.</label>
+                <select class="form-control question" id="q10">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Eh, not really.</option>
+                    <option value="3">3 Ambivalent or indifferent.</option>
+                    <option value="4">4 Sure, why not.</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </li>
+    </ol>
+    <button class="btn border-dark ml-2 mt-2 mb-2" id='submit_form'>Submit</button>
+    <footer class="mt-3"></footer>
+
+    <!-- Modal for failure to appreciate bacon -->
+    <div class="modal fade" id="baconModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    We noticed that you despise bacon. Due to this choice, we cannot in good faith recommend you as a friend to anyone. Thank
+                    you for your time.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--successful submission modal-->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    'Your results have been posted!'
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script type="text/javascript">
+    $('document').ready(function () {
+
+        $('#submit_form').on('click', function (event) {
+            event.preventDefault();
+            if ($('#q1').val().trim() == 1) {
+                $('#baconModal').modal();
+            } else {
+                let scores = [];
+                scores.push($('#q1').val().trim());
+                scores.push($('#q2').val().trim());
+                scores.push($('#q3').val().trim());
+                scores.push($('#q4').val().trim());
+                scores.push($('#q5').val().trim());
+                scores.push($('#q6').val().trim());
+                scores.push($('#q7').val().trim());
+                scores.push($('#q8').val().trim());
+                scores.push($('#q9').val().trim());
+                scores.push($('#q10').val().trim());
+                let newUser = {
+                    name: $('#name').val().trim(),
+                    photo: $('#picture').val().trim(),
+                    scores: scores
+                }
+                console.log(newUser);
+                $.post("/api/friends", newUser, function (data) {
+                    $('#successModal').modal();
+                })
+            }
+        });
+        $('#successModal').on('hidden.bs.modal', function (e) {
+            window.location.href = "/friend-display";
+        });
+    });
+</script>
 
 </html>
